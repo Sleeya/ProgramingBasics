@@ -1,0 +1,46 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var n = double.Parse(Console.ReadLine());
+            var p1 = 0;
+            var p2 = 0;
+            var p3 = 0;
+
+            for (int i = 0; i < n ; i++)
+            {
+                var number = double.Parse(Console.ReadLine());
+
+                if (number % 2 == 0)
+                {
+                    p1++;
+                }
+                if (number % 3 == 0)
+                {
+                    p2++;
+                }
+                if (number %4 == 0)
+                {
+                    p3++;
+                }
+            }
+            var sump1 = (p1 / n) * 100;
+            var sump2 = (p2 / n) * 100;
+            var sump3 = (p3 / n) * 100;
+
+            Console.WriteLine($"{sump1:f2}%");
+            Console.WriteLine($"{sump2:f2}%");
+            Console.WriteLine($"{sump3:f2}%");
+
+
+        } 
+    }
+}
